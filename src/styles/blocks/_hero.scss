@@ -1,0 +1,58 @@
+  .hero {
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding-inline: 20px;
+
+  &__title { 
+    margin:0;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 1; 
+    letter-spacing: 0%;
+    color: $h1-color;
+  }
+
+  &__ticket-btn { 
+    margin-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    border: 1px solid $btn-border;
+    width: 280px; 
+    height: 50px; 
+    align-items: center;
+    background: #fff;
+  }
+
+  &__btn-text {
+    font-family: "IBM Plex Sans", sans-serif;
+    text-align: center;
+    font-size: 16x;
+    flex: 1;
+    font-weight: 500;
+    line-height: 100%;
+    color: $btn-text-color;
+  }
+
+   &__arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    background: #20635b;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+} 
+
