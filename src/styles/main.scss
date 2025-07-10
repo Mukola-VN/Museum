@@ -1,12 +1,15 @@
  @import './utils/fonts';
 @import './utils/mixins';
 @import './utils/vars';
+@import './utils/extends';
 
 @import './blocks/header';
 @import './blocks/page';
 @import './blocks/icons';
 @import './blocks/hero';
 @import './blocks/menu';
-@import './blocks/main-section';
+@import './blocks/events';
+@import './blocks/about-us';
+@import './blocks/gallery';
 
 

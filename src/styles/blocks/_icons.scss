@@ -7,6 +7,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   &--menu {
     background-image: url('/images/icons/burger-menu.png');
@@ -16,6 +17,6 @@
   }
 
   &--close {
-    background-image: url('/images/icons/ri-close-fill.png');
+  background-image: url('/images/icons/ri-close-fill.png');
   }
 }

@@ -1,0 +1,56 @@
+.about-us {
+
+  &__img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 210px;
+  }
+
+  &__lecture {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 280px;
+    transform: translateY(-50px);
+    margin-inline: auto;
+  }
+  
+  &__caption {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 24px;
+    padding-inline: 21px;
+  }
+
+  &__label {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    color: #687480;
+    margin: 0;
+    display: block; 
+
+  }
+
+   &__date {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #1A5A4C;
+    margin: 0; 
+  }
+
+  &__name {
+    font-family: Montserrat, sans-serif;
+    color: #0F0E08;
+    font-weight: 400;
+    font-size: 28px;
+
+    margin: 0;
+    text-align: center;
+    padding-block-end: 20px;
+    box-shadow: 0 2px 0 0 #1A5A4C40;
+  }
+}

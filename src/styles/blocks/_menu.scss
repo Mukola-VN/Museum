@@ -1,59 +1,62 @@
-  .menu {
-    display: none  !important ;
-    font-family: "IBM Plex Sans", sans-serif;
-    position: fixed;
-    box-sizing: border-box;   
-    background-color: $menu-color;
-    top: 0;
-    left: 0;
-    right: 0;
-    height:665px;
-    width: 100%;
-      &.menu--open {
-    transform: translateX(0);
-  }
+.menu {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 665px;
+  background-color: $menu-color;
+  z-index: 1000;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  font-family: "IBM Plex Sans", sans-serif;
 
+  #menu:target {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  }
+  
   &__container {
-    margin-top: 27px;
+    min-height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     padding-inline: 20px;
+    padding-block: 27px;
   }
 
   &__nav {
     display: flex;
-    align-items: flex-start; 
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 28px;
-  
-    // риска внизу 
-    padding-bottom: 24px; 
-    border-bottom: 1px solid #fff; 
-
+    padding-bottom: 24px;
+    border-bottom: 1px solid #fff;
   }
 
   &__list {
-    width: 100%;
-    margin: 0;
     padding: 0;
-    flex: 1;
-
+    margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: 1fr 1fr;
     list-style: none;
     gap: 28px;
+  }
 
-  
-   }
-
-   &__link {
+  &__link {
     color: #fff;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
     text-decoration: none;
   }
-    // Розклад 
+
   &__schedule {
-    margin-top: 24px;
+    padding-top: 24px;
+
   }
 
   &__schedule-title {
@@ -61,26 +64,36 @@
     font-size: 14px;
     line-height: 141%;
     color: #fff;
+   
+    padding-top: 24px;
   }
 
   &__schedule-list {
+    margin:0;
     padding: 0;
+    padding-bottom: 16px;
+    padding-top: 20px;
     list-style: none;
   }
 
   &__schedule-list li,
   &__schedule-note {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 150%;
-  color: #fff;
-  }
- 
-  &__schedule-list span,
-   &__schedule-note span {
-    font-weight:400;
+    font-weight: 600;
     font-size: 14px;
     line-height: 150%;
     color: #fff;
+  }
+
+  &__schedule-days,
+  &__schedule-note span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #fff;
+  }
+
+    &__overlay {
+    height: 100%;
+    background-color: #18181a50;
   }
 }
