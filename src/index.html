@@ -1,9 +1,14 @@
 <html lang="en" class="page">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+       rel="stylesheet"
+       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+       />
     <title>Museum</title>
-    <link rel="stylesheet" href="./styles/main.scss" />
+<link rel="stylesheet" href="./styles/main.scss" />
+
   </head>
   <body class="page__body">
     <header class="header">
@@ -39,30 +44,30 @@
               <a class="menu__link" href="#details">Контакти</a>
             </li>
           </ul>
-                  <!--Close Btn -->
+          <!--Close Btn -->
         </nav>
-
+        
         <!-- Schedule -->
         <div class="menu__schedule">
           <span class="menu__schedule-title">Графік роботи</span>
-             <ul class="menu__schedule-list">
-               <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">середа</span></li>
-               <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">четвер</span></li>
-               <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">п’ятниця</span></li>
-               <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">субота</span></li>
-               <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">неділя</span></li>
-             </ul>
+          <ul class="menu__schedule-list">
+            <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">середа</span></li>
+            <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">четвер</span></li>
+            <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">п’ятниця</span></li>
+            <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">субота</span></li>
+            <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">неділя</span></li>
+          </ul>
           <div class="menu__schedule-note">
             Вихідні:<br />
             <span>понеділок, вівторок<br />Каса припиняє роботу за 1 годину до закриття музею</span>
           </div>
         </div>
       </div>
-
-     <div class="menu__overlay"></div>
+      
     </aside>
-
-
+<a href="#" class="menu__overlay"></a>
+    
+    
     <!-- MAIN -->
     <main class="main">
       <!-- HERO  SECTION  -->
@@ -150,25 +155,45 @@
           <h3 class="about-us__name">Від класицизму до романтизму</h3>
         </div>
       </section>
-      <section 
-         class="gallery" 
-         id="gallery">
-         <h2 class="gallery__title">ГАЛЕРЕЯ</h2>
-         <div class="gallery__container">
-          <img 
-            src="/images/gallery-section/gallery-main.photo.png" 
-            alt="gallery-photo"
-            class="gallery__image"
-            >
-            <img 
-              src="/images/gallery-section/slaider-img.png" 
-              alt="slaised-photo" 
-              class="gallery__image-slaider"
-              >
-         </div>
+      <!-- Gallery -->
+<section class="gallery" id="gallery">
+        <h2 class="gallery__title">Галерея</h2>
+        <div class="gallery__container">
+          <!-- Grid for desktop -->
+          <div class="gallery__grid">
+            <img src="/images/gallery-section/1-foto.png" alt="slide-1" class="gallery-image gallery-image-1" />
+            <img src="/images/gallery-section/3-foto.png" alt="slide-3" class="gallery-image gallery-image-3" />
+            <img src="/images/gallery-section/4-foto.png" alt="slide-4" class="gallery-image gallery-image-4" />
+            <img src="/images/gallery-section/5-foto.png" alt="slide-5" class="gallery-image gallery-image-5" />
+          </div>
+
+          <!-- Swiper for mobile/tablet -->
+          <div class="swiper gallery__swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="/images/gallery-section/1-foto.png" alt="slide-1" class="gallery__swiper-image" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/gallery-section/2-foto.png" alt="slide-2" class="gallery__swiper-image" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/gallery-section/3-foto.png" alt="slide-3" class="gallery__swiper-image" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/gallery-section/4-foto.png" alt="slide-4" class="gallery__swiper-image" />
+              </div>
+              <div class="swiper-slide">
+                <img src="/images/gallery-section/5-foto.png" alt="slide-5" class="gallery__swiper-image" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
       </section>
     </main>
 
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

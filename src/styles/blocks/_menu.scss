@@ -1,17 +1,18 @@
 .menu {
-  box-sizing: border-box;
-  position: absolute;
+  font-family: "IBM Plex Sans", sans-serif;
+ 
+  position: fixed;
   top: 0;
   left: 0;
-  width: 320px;
-  height: 441px;
+  max-width: 100%;
+  height: 399px;
   background-color: $menu-color;
-  z-index: 1000;
+  z-index: 2;
   transform: translateX(-100%);
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  font-family: "IBM Plex Sans", sans-serif;
+  transition: transform 0.5s ease, 
+  opacity 0.5s ease;
 
   &:target {
   transform: translateX(0);
@@ -20,8 +21,9 @@
   }
   
   &__container {
+     box-sizing: border-box;
     padding-inline: 20px;
-    padding-block: 27px;
+    padding-block: 27px ;
   }
 
   &__nav {
@@ -60,8 +62,6 @@
     font-size: 14px;
     line-height: 141%;
     color: #fff;
-   
-    padding-top: 24px;
   }
 
   &__schedule-list {
@@ -87,11 +87,30 @@
     line-height: 150%;
     color: #fff;
   }
+}
 
-    &__overlay {
-    height: 666px;
-    width: 320px;
-    background-color: #18181a50;
+ .menu__overlay {
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 665px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(24, 24, 26, 0.3);
+    z-index: 1;
   }
 }
 
+
+#menu:target ~ .menu__overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
