@@ -7,21 +7,9 @@
   &__body {
     margin: 0;
     padding: 0;
-  
-    @include on-tablet {
-    display: grid;
-    grid-template-columns: repeat(6, 90px);
-    column-gap: 30px;
-    row-gap: 20px;
-    justify-content: center; // Центруємо grid по ширині екрана
-    padding: 0 39px; // бокові відступи згідно макету
-    max-width: 768px;
-    margin: 0 auto; // щоб центрувати сам body при великому екрані
-    height: 100vh;
   }
-  }
-}
 
 html:target {
   scroll-behavior: auto;
+}
 }
