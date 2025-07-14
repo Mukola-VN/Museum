@@ -1,4 +1,5 @@
 .about-us {
+     height: 288px;
 
   &__img {
     box-sizing: border-box;
@@ -7,15 +8,20 @@
   }
 
   &__lecture {
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     background-color: #fff;
     width: 280px;
-    transform: translateY(-50px);
+
+
+    transform: translateY(-50%);
     margin-inline: auto;
+
   }
   
   &__caption {
+    
     display: flex;
     justify-content: space-between;
     padding-block: 24px;
@@ -23,30 +29,20 @@
   }
 
   &__label {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    color: #687480;
-    margin: 0;
+    @extend %h4;
     display: block; 
+    margin: 0;
+    color: #687480;
 
   }
 
-   &__date {
-    font-family: 'IBM Plex Sans', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    color: #1A5A4C;
+  &__date {
+    @extend %date-text;
     margin: 0; 
   }
 
   &__name {
-    font-family: Montserrat, sans-serif;
-    color: #0F0E08;
-    font-weight: 400;
-    font-size: 28px;
+   @extend  %h3;
 
     margin: 0;
     text-align: center;

@@ -1,43 +1,51 @@
 .gallery {
+  
+  box-sizing: border-box;
+   margin-top: 100px;
+
   &__title {
+    @extend %h2;
     padding-inline: 80px;
     margin: 0;
-    font-size: 2rem;
-    font-weight: bold;
   }
  
   &__container {
     padding-inline: 20px;
-    padding-block: 40px 129px;
+   padding-top: 40px;
+
   }
  
   &__swiper {
     display: block;
     position: relative;
-    padding-bottom: 50px;
+
   }
  
   &__swiper-image {
-    object-fit: contain;
-    width: 280px;
-    height: 410px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
  
   .swiper-slide {
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
     cursor: pointer;
   }
  
   .swiper-pagination {
-   position: relative !important;
-    bottom: -20px !important;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    position: relative !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+     --swiper-pagination-bottom: 0px;
+     margin-top: 20px;
+
+     left: 50%;
+     transform: translateX(-50%);
   }
  
   &__grid {
@@ -53,6 +61,12 @@
       padding-inline: 40px;
       padding-block: 60px 150px;
     }
+
+     &__swiper-image {
+
+    width: 100%;
+    height: 410px;
+  }
   }
  
   @media (min-width: 1280px) {
@@ -82,7 +96,8 @@
     .gallery-image-1 {
       grid-column: 1;
       grid-row: 1;
-      height: 400px;
+      height: 100%;
+     
     }
      
     .gallery-image-3 {
@@ -109,12 +124,12 @@
 .swiper-pagination-bullet {
   background: #333 !important;
   opacity: 0.3 !important;
-  width: 12px !important;
-  height: 12px !important;
+  width: 9px !important;
+  height: 9px !important;
   border-radius: 50% !important;
-  display: inline-block !important;
-  margin: 0 11px !important; /* 22px gap = 11px з кожного боку */
+  margin: 0 !important;
   cursor: pointer !important;
+  display: inline-block;
 }
 
 .swiper-pagination-bullet-active {
@@ -122,11 +137,9 @@
   background: #1A5A4C !important;
 }
 
-// Додаткові стилі для пагінації
-.gallery .swiper-pagination {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: auto !important;
-  height: auto !important;
+.swiper-wrapper {
+  height: 410px;
+  width: 210px;
 }
+
+
