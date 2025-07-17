@@ -1,18 +1,32 @@
 .events {
-  padding-block: 70px 60px;
+    padding-block: 70px 60px;
+    @include content-padding-inline;
 
+  @include on-tablet {
+    padding-block: 88px 112px;
+    @include content-padding-inline;
+  }
 
   &__title {
     @extend %h2;
-    
-    padding-inline: 20px;
     margin: 0;
+
+ @include on-tablet {
+       @extend %h2;
+       font-size: 48px;
+    }
+
+  @include on-tablet {
+       text-align: start;
+    }
   }
 
   &__container {
     padding-top: 40px;
-    padding-inline: 20px;
-
+   
+    @include on-tablet {
+       padding-top: 48px;
+    }
   }
 
   &__item {
@@ -26,6 +40,12 @@
     object-fit: cover;
     height: 210px;
     width: 100%;
+    padding: 0;
+
+    @include on-tablet {
+      height: 520px;
+
+    }
    }
    
   &-meta {
@@ -36,19 +56,37 @@
     margin-top: 20px;
     margin-bottom: 15px;
 
+  @include on-tablet {
+    margin-top: 44px;
+    margin-bottom: 32px;
+  }
+
     &-2 {
        margin-bottom: 10px;
+
+  @include on-tablet {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
     }
   }
 
   &-type {
    @extend %h4;
 
+   @include on-tablet {
+       @extend %h4;
+       font-size: 14px;
+   }
+
   }
 
   &-date {
- @extend %date-text;
-
+    @extend %date-text;
+    
+    @include on-tablet {
+      font-size: 14px;
+    }
   }
 
   &-name {
@@ -60,6 +98,11 @@
   margin: 0;
   vertical-align: text-bottom;
   @extend %h3;
+
+  @include on-tablet {
+    font-size: 36px;
+    margin-bottom: 15px;
+   }
   }
 
   &-cube {
@@ -70,13 +113,11 @@
 }
 
   &-description {
-    margin-top: 10px;
-
-    @extend  %description-text;
+    @extend  %description-text;  
   }
 
-  }
-  }
+  } 
+}
   
  
 

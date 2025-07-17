@@ -14,31 +14,28 @@
 <header class="header">
   <div class="header__container">
     
-    <div class="header__image"></div>
-    <div class="header__top-bar">
-      <div class="header__logo">
-      <a href="#" class="header__logo header__logo">NA<br />MU</a>
-    </div>
-    <div class="header__icon">
-      <a href="#menu" class="header__burger icon icon--menu"></a>
-    </div>
+    <div class="header__image">
+     
+        <a href="#" class='header__logo'>NA<br />MU</a>
 
     </div>
-
+    
     <div class="header__bottom">
       <h1 class="header__title">
         <span>ХУДОЖНІЙ<br/>МУЗЕЙ</span>
       </h1>
-
+      
       <div class="header__ticket">
         <span class="header__ticket-text">КВИТКИ</span>
         <button class="header__arrow-btn">
           <img src="/images/icons/arrow_right.png" alt="Стрілка" />
         </button>
       </div>
-
     </div>
-    
+    <div class="header__icon">
+      <a href="#menu" class="header__burger icon icon--menu"></a>
+    </div>
+
   </div>
 </header>
 
@@ -62,39 +59,42 @@
               <a class="menu__link" href="#details">Контакти</a>
             </li>
           </ul>
-          <!--Close Btn -->
         </nav>
+        <div class="menu__border "></div>
+
         
         <!-- Schedule -->
         <div class="menu__schedule">
           <span class="menu__schedule-title">Графік роботи</span>
-          <ul class="menu__schedule-list">
-            <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">середа</span></li>
-            <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">четвер</span></li>
-            <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">п’ятниця</span></li>
-            <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">субота</span></li>
-            <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">неділя</span></li>
-          </ul>
-          <div class="menu__schedule-note">
-            Вихідні
-            <span>понеділок, вівторок <br>Каса припиняє роботу за 1 годину до закриття музею</span>
+              <div class="menu__schedule-content">
+
+                <ul class="menu__schedule-list">
+                  <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">середа</span></li>
+                  <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">четвер</span></li>
+                  <li><strong>12:00 — 20:00</strong> <span class="menu__schedule-days">п’ятниця</span></li>
+                  <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">субота</span></li>
+                  <li><strong>11:00 — 19:00</strong> <span class="menu__schedule-days">неділя</span></li>
+                </ul>
+
+                <div class="menu__schedule-note">
+                  Вихідні:
+                  <span>понеділок, вівторок <br>Каса припиняє роботу за 1 годину до закриття музею</span>
+                </div>
+
+              </div>
           </div>
-        </div>
-      </div>
-      
     </aside>
-  <a href="#" class="menu__overlay"></a>
+<div class="menu__overlay"></div>
 
     <!-- MAIN -->
     <main class="main">
-      <!-- HERO  SECTION  -->
       <!-- EVENTS SECTION -->
       <section
         class="events"
         id="events"
       >
       <!-- контейнер  З двома items-->
-      <h2 class="events__title">Актуальні<br>події</h2> 
+      <h2 class="events__title">Актуальні події</h2> 
       <div class="events__container">
         <!--  1 виставка  -->
           <article class="events__item">
@@ -121,7 +121,7 @@
           <!--  2 виставка  -->
           <article class="events__item">
             <img
-              src="/images/events-section/first-picture.png"
+              src="/images/events-section/second-picture.png"
               alt="Виставка Йду і повертаюсь"
               class="events__item-image"
             />
@@ -142,17 +142,19 @@
       </section>
       <!-- About Us -->
       <section class="about-us">
-        <img
-          class="about-us__img"
-          src="/images/about-us.section/about-us.img.png"
-          alt="back"
-        />
+        <div class="about-us__container">
+          <img
+            class="about-us__img"
+            src="/images/about-us.section/about-us.img.png"
+            alt="back"
+          />
         <div class="about-us__lecture">
           <div class="about-us__caption">
             <h4 class="about-us__label">Лекції</h4>
             <p class="about-us__date">26.08-29.11.2019</p>
           </div>
           <h3 class="about-us__name">Від класицизму до романтизму</h3>
+        </div>
         </div>
       </section>
       <!-- Gallery -->

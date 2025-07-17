@@ -1,8 +1,8 @@
 .footer {
+  @include content-padding-inline;
    padding-block: 18px 40px;
 
   &__container {
-    padding-inline: 20px;
 
     display: flex;
     flex-direction: column;

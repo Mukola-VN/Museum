@@ -1,16 +1,19 @@
 .gallery {
   
   box-sizing: border-box;
-   margin-top: 100px;
+   padding-top: 100px;
+   @include content-padding-inline;
 
   &__title {
     @extend %h2;
-    padding-inline: 80px;
+    text-align: center;
     margin: 0;
+
+    
   }
  
   &__container {
-    padding-inline: 20px;
+
    padding-top: 40px;
 
   }
