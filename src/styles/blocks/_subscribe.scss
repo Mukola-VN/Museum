@@ -30,8 +30,8 @@
 
   &__image {
     width: 100%;
-    object-fit: cover;
-    display: block;
+    object-fit: cover ;
+ 
 
   @include on-tablet {
     height: 380px;
@@ -81,8 +81,9 @@
     display: flex;
     position: absolute;
     overflow: hidden;
+    gap: 16px;
     top: 248px;
-    bottom:  88px; 
+    bottom:88px; 
     left: 20px;
     right: 20px;
     height: 50px;
@@ -91,7 +92,7 @@
   @include on-tablet {
     height: 70px;
     width: 460px;
-    gap: 16px;
+
     top: 228px;
     left: 154px;
     right: 154px;
@@ -108,7 +109,7 @@
     outline: none;
 
   @include on-tablet {
-    width: 100%;
+    width: 374px;
     padding: 24px 28px;
   }
 
@@ -142,5 +143,4 @@
       width: 24px;
       height: 24px;
     }
-
 }
