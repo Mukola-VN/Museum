@@ -3,7 +3,6 @@
   width: 24px;
   height: 24px;
 
-
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -12,19 +11,17 @@
   &--menu {
     background-image: url('/images/icons/burger-menu.png');
 
-  &:hover {
-    background-image: url(/images/icons/bg-menu-hover.svg);
-    color:  hwb(210 94% 30%);
-   } 
+    &:hover {
+      background-image: url(/images/icons/bg-menu-hover.svg);
+      color: hwb(210deg 94% 30%);
+    }
   }
 
   &--close {
-  background-image: url('/images/icons/ri-close-fill.png');
-  
-  &:hover {
-color:  hwb(210 94% 30%);
-}
+    background-image: url('/images/icons/ri-close-fill.png');
+
+    &:hover {
+      color: hwb(210deg 94% 30%);
+    }
   }
 }
- 
-

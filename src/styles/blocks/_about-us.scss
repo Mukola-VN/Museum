@@ -1,23 +1,21 @@
 .about-us {
   width: 100%;
- 
-  
+
   &__img {
     box-sizing: border-box;
     width: 100%;
     height: 210px;
 
-  @include on-tablet {
-    height: 390px;
-    @include content-padding-inline;
-  }
+    @include on-tablet {
+      height: 390px;
 
-  @include on-desktop  {
-    height: 550px;
-    padding: 0;
-  }
-   
+      @include content-padding-inline;
+    }
 
+    @include on-desktop {
+      height: 550px;
+      padding: 0;
+    }
   }
 
   &__lecture {
@@ -27,62 +25,63 @@
     background-color: #fff;
     width: 280px;
     transform: translateY(-50%);
-    margin-inline: auto; 
+    margin-inline: auto;
 
-  @include on-tablet {
-    height: 204px;
-    width: 570px;
-    padding-inline: 55px;
-  }  
-  @include on-desktop {
-    padding-inline: 100px;
+    @include on-tablet {
+      height: 204px;
+      width: 570px;
+      padding-inline: 55px;
+    }
+
+    @include on-desktop {
+      padding-inline: 100px;
+    }
   }
-  }
-  
+
   &__caption {
     display: flex;
     justify-content: space-between;
     padding-block: 24px;
     padding-inline: 21px;
-    
+
     @include on-tablet {
       padding-inline: 0;
       padding-top: 45px;
-    
     }
   }
 
   &__label {
     @extend %h4;
-    display: block; 
+
+    display: block;
     margin: 0;
     color: #687480;
-    
-  @include on-tablet {
+
+    @include on-tablet {
       font-size: 14px;
     }
-
   }
 
   &__date {
     @extend %date-text;
+
     margin: 0;
 
-  @include on-tablet {
+    @include on-tablet {
       font-size: 14px;
     }
   }
 
   &__name {
-   @extend  %h3;
+    @extend %h3;
 
     margin: 0;
     text-align: center;
     padding-bottom: 20px;
-    box-shadow: 0 2px 0 0 #1A5A4C40;
+    box-shadow: 0 2px 0 0 #1a5a4c40;
 
     @include on-tablet {
-       text-align: start;
+      text-align: start;
     }
 
     @include on-desktop {

@@ -1,6 +1,7 @@
 .gallery {
   box-sizing: border-box;
   padding-top: 40px;
+
   @include content-padding-inline;
 
   @include on-tablet {
@@ -13,6 +14,7 @@
 
   &__title {
     @extend %h2;
+
     padding-bottom: 40px;
     text-align: center;
     margin: 0;
@@ -108,14 +110,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
   }
 
   &__swiper-image {
     object-fit: cover;
     width: 100%;
     height: 100%;
-     cursor: pointer;
+    cursor: pointer;
 
     @include on-tablet {
       height: 543px;
@@ -131,6 +132,7 @@
     margin-top: 20px;
     left: 50%;
     transform: translateX(-50%);
+
     --swiper-pagination-bottom: 0;
 
     @include on-tablet {
@@ -162,5 +164,5 @@
 
 .swiper-pagination-bullet-active {
   opacity: 1 !important;
-  background: #1A5A4C !important;
+  background: #1a5a4c !important;
 }

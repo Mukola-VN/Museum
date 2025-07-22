@@ -64,7 +64,6 @@
   &__social {
     display: flex;
     gap: 16px;
-  
 
     @include on-tablet {
       padding-top: 62px;
@@ -99,7 +98,6 @@
 
       &:hover {
         background-image: url(/images/footer-media-icon/instagram-hover.png);
-
       }
     }
   }
@@ -123,6 +121,7 @@
 
   &__title {
     @extend %footer-title;
+
     margin-bottom: 20px;
   }
 
@@ -137,6 +136,7 @@
 
     li {
       @extend %footer-schedule;
+
       display: flex;
       flex-direction: column;
 
@@ -153,6 +153,7 @@
 
   &__note {
     margin-top: 20px;
+
     @extend %footer-contart;
 
     @include on-tablet {
@@ -169,6 +170,7 @@
 
   &__address-link {
     @extend %footer-contart;
+
     cursor: pointer;
   }
 
@@ -188,15 +190,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #1A5A4C;
+    border: 1px solid #1a5a4c;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    color: #1A5A4C;
+    color: #1a5a4c;
     background: none;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      color 0.3s ease;
 
     &:hover {
       transform: scale(1.2);
@@ -209,7 +213,7 @@
   }
 
   &__border {
-    border-top: 1px solid #1A5A4C;
+    border-top: 1px solid #1a5a4c;
     width: 100%;
 
     @include on-tablet {
@@ -218,13 +222,11 @@
 
     @include on-desktop {
       position: absolute;
-      top: 47px;
-      left: 690px;
-      right: 587px;
-      bottom: 150px;
+      inset: 47px 587px 150px 690px;
+
       width: 1px;
       height: 260px;
-      background-color: #1A5A4C;
+      background-color: #1a5a4c;
     }
   }
 
@@ -244,6 +246,7 @@
 
       li {
         @extend %footer__nav-text;
+
         display: flex;
         gap: 20px;
         align-items: flex-start;
@@ -272,7 +275,9 @@
   a {
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    transition:
+      transform 0.3s ease-in-out,
+      color 0.3s ease-in-out;
 
     &:hover {
       transform: scale(1.2);
@@ -302,6 +307,7 @@
 
   &__copyright {
     @extend %footer__designer;
+
     margin-bottom: 10px;
     white-space: nowrap;
   }

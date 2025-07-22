@@ -1,26 +1,24 @@
 .header {
-    box-sizing: border-box;
-    display: flex;
- 
-    
+  box-sizing: border-box;
+  display: flex;
+
   &__container {
     width: 100%;
     height: 100%;
 
-  @include on-tablet {
-     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-     column-gap: 30px;
+    @include on-tablet {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 30px;
     }
-  
-  @include on-desktop {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 30px;
-    padding-left: 55px;
+
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+      padding-left: 55px;
+    }
   }
- 
- }
 
   &__image {
     position: relative;
@@ -30,111 +28,111 @@
     background-size: cover;
     background-position: center;
 
-  @include on-tablet {
-    grid-column: 4 / 7;
-    width: 374px;
-    height: 384px;
+    @include on-tablet {
+      grid-column: 4 / 7;
+      width: 374px;
+      height: 384px;
     }
 
-  @include on-desktop {
-    grid-column: 6 / 13;
-    width: 725px;
-    height: 655px;
-   }
+    @include on-desktop {
+      grid-column: 6 / 13;
+      width: 725px;
+      height: 655px;
+    }
   }
 
   &__logo {
-    position: absolute;
     @extend %h1;
+
+    position: absolute;
     text-decoration: none;
     font-size: 30px;
-   
+
     transform: translateX(-50%);
-    top:  9px;
+    top: 9px;
     left: 50%;
     width: 55px;
     height: 61px;
 
-  @include on-tablet {
-    top: 15px;
+    @include on-tablet {
+      top: 15px;
 
-    left: 30%;
-    right: 154px;
-    width: 220px;
-    height: 72px;
-    font-size: 36px;
+      left: 30%;
+      right: 154px;
+      width: 220px;
+      height: 72px;
+      font-size: 36px;
+    }
+
+    @include on-desktop {
+      width: 170px;
+      height: 72px;
+      right: 555px;
+      bottom: 568px;
+      left: 12%;
+    }
   }
 
-  @include on-desktop {
-    width: 170px;
-    height: 72px;
-    right: 555px;
-    bottom: 568px;
-    left: 12%;
-   }
- }
+  &__icon {
+    position: absolute;
+    top: 27px;
+    left: 20px;
+    display: flex;
 
- 
- &__icon {
-   position: absolute;
-   top: 27px;
-   left: 20px;
-   display: flex;
+    @include on-tablet {
+      position: absolute;
+      top: 39px;
+      left: 34px;
+    }
 
-
- @include on-tablet {
-   position: absolute;
-   top: 39px;               
-   left: 34px;
+    @include on-desktop {
+      top: 39px;
+      left: 55px;
+    }
   }
-
- @include on-desktop {
-   top: 39px;
-   left: 55px;
-  }
- }
 
   &__bottom {
     padding-top: 20px;
     padding-inline: 20px;
-     
-  @include on-tablet {
-    position: absolute; 
-    grid-column: 1 / 4;
-    padding: 0;
-    top: 127px;
-    left: 34px;
-    width: 340px;
-    height: 130px;
+
+    @include on-tablet {
+      position: absolute;
+      grid-column: 1 / 4;
+      padding: 0;
+      top: 127px;
+      left: 34px;
+      width: 340px;
+      height: 130px;
     }
 
-  @include on-desktop {
-    grid-column: 1 / 6;
-    left: 55px;
-    top: 127px;
-    width: 470px;
-    height: 172px;
-   }
+    @include on-desktop {
+      grid-column: 1 / 6;
+      left: 55px;
+      top: 127px;
+      width: 470px;
+      height: 172px;
+    }
   }
 
   &__title {
     @extend %h1;
+
     margin: 0;
     color: $h1-color;
     text-align: center;
     margin-bottom: 20px;
 
-  @include on-tablet {
-    margin-bottom: 38px;
-    text-align: start;
-    font-size: 54px;
-  }
+    @include on-tablet {
+      margin-bottom: 38px;
+      text-align: start;
+      font-size: 54px;
+    }
 
-  @include on-desktop {
-    font-size: 72px;
-    margin-bottom: 89px;
+    @include on-desktop {
+      font-size: 72px;
+      margin-bottom: 89px;
+    }
   }
-}
 
   &__ticket {
     display: flex;
@@ -145,21 +143,20 @@
     border: 1px solid $btn-border;
     box-sizing: border-box;
     text-decoration: none;
-    
-  @include on-tablet {
-    width: 270px;
-    height: 70px;
-   }
 
-  @include on-desktop {
+    @include on-tablet {
+      width: 270px;
+      height: 70px;
+    }
 
-   margin-left: calc(50% - 30px)
-
-  }
+    @include on-desktop {
+      margin-left: calc(50% - 30px);
+    }
   }
 
   &__ticket-text {
     @extend %h4;
+
     flex: 1;
     text-align: center;
     color: $btn-text-color;
@@ -175,51 +172,49 @@
     height: 50px;
     cursor: pointer;
 
-
-  &:hover {
-    filter: brightness(1.2);
-  }
+    &:hover {
+      filter: brightness(1.2);
+    }
 
     img {
       width: 24px;
       height: 24px;
     }
 
-    
     @include on-tablet {
-    width: 70px;
-    height: 70px;
+      width: 70px;
+      height: 70px;
     }
   }
 
   &__border {
     display: none;
 
-  @include on-desktop {
-    display: flex;
-    position: absolute;
+    @include on-desktop {
+      display: flex;
+      position: absolute;
 
-    top: 522px;
-    left: 55px;
-    width: 14px;
-    height: 133px;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center; 
-    justify-content: center;
-    flex-direction:column-reverse;
-  }
+      top: 522px;
+      left: 55px;
+      width: 14px;
+      height: 133px;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+    }
 
-  &-text {
-    @extend  %header__border-text;
-     writing-mode: vertical-lr;
-     transform: rotate(180deg);
+    &-text {
+      @extend %header__border-text;
+
+      writing-mode: vertical-lr;
+      transform: rotate(180deg);
     }
 
     &-line {
       width: 1px;
       height: 70px;
-      background-color: #1A5A4C;
+      background-color: #1a5a4c;
     }
   }
 }

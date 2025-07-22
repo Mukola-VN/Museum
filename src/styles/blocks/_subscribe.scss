@@ -21,7 +21,7 @@
   }
 
   @include on-desktop {
-    margin: 0; 
+    margin: 0;
   }
 
   &__container {
@@ -34,41 +34,41 @@
 
     padding-block: 88px;
     padding-inline: 20px;
- 
 
-  @include on-tablet {
-    padding-block: 82px;
-    padding-inline: 154px;
-  }
+    @include on-tablet {
+      padding-block: 82px;
+      padding-inline: 154px;
+    }
 
-  @include on-desktop {
-    height: 550px;
-    padding-block: 163px;
-    padding-inline: 355px;
-   }
+    @include on-desktop {
+      height: 550px;
+      padding-block: 163px;
+      padding-inline: 355px;
+    }
   }
 
   &__title {
-    margin: 0;
     @extend %h2;
+
+    margin: 0;
     padding-bottom: 20px;
     text-align: center;
     color: #fff;
 
-  @include on-tablet {
-    padding-bottom: 16px;
-   }
+    @include on-tablet {
+      padding-bottom: 16px;
+    }
 
-   @include on-desktop {
-    font-size: 48px;
-   }
+    @include on-desktop {
+      font-size: 48px;
+    }
   }
-  
+
   &__description {
     @extend %subscribe-text;
+
     align-items: center;
     display: flex;
-
 
     @include on-tablet {
       padding: 0;
@@ -82,12 +82,12 @@
     padding-top: 50px;
     z-index: 2;
 
-  @include on-tablet {
-    padding-top: 64px;
-  }
+    @include on-tablet {
+      padding-top: 64px;
+    }
 
-  @include on-desktop {
-    padding-top: 73px;
+    @include on-desktop {
+      padding-top: 73px;
     }
   }
 
@@ -130,20 +130,19 @@
     width: 50px;
     height: 50px;
     padding: 0;
-    background-color: #F14A27;
+    background-color: #f14a27;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 
-    @include on-tablet { 
+    @include on-tablet {
       width: 70px;
       height: 70px;
     }
 
     &:hover {
-      background-color: darken(#F14A27, 10%);
+      filter: brightness(90%);
     }
-
     &-icon {
       width: 24px;
       height: 24px;

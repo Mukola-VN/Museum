@@ -9,7 +9,9 @@
   transform: translateX(-100%);
   opacity: 0;
   pointer-events: none;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 
   @include on-tablet {
     height: 225px;
@@ -35,7 +37,7 @@
     @include on-tablet {
       padding-top: 39px;
       padding-inline: 34px;
-      
+
       display: grid;
       height: 100%;
       grid-template-columns: repeat(6, 90px);
@@ -46,7 +48,7 @@
       max-width: 1280px;
       padding-block: 40px;
       padding-inline: 56px;
-      
+
       display: grid;
       grid-template-columns: repeat(12, 70px);
       column-gap: 30px;
@@ -65,7 +67,7 @@
       grid-column: 1 / 4;
       grid-row: 1;
     }
-    
+
     @include on-desktop {
       grid-column: 1 / 5;
       grid-row: 1;
@@ -79,7 +81,7 @@
     grid-template-columns: 1fr 1fr;
     list-style: none;
     gap: 28px;
-    
+
     @include on-tablet {
       gap: 20px;
     }
@@ -91,6 +93,7 @@
 
   &__link {
     @extend %h4;
+
     color: #fff;
     font-weight: 500;
     font-size: 16px;
@@ -98,13 +101,13 @@
     text-decoration: none;
 
     &:hover {
-    color:  hwb(210 94% 30%);
+      color: hwb(210deg 94% 30%);
     }
   }
 
   &__border {
     border-bottom: 1px solid #fff;
-    
+
     @include on-tablet {
       display: block;
       grid-column: 3 / 4;
@@ -115,7 +118,7 @@
       height: 145px;
       justify-self: end;
     }
-    
+
     @include on-desktop {
       grid-column: 5 / 6;
       grid-row: 1;
@@ -125,7 +128,7 @@
 
   &__schedule {
     padding-top: 24px;
-    
+
     @include on-tablet {
       padding: 0;
       grid-column: 4 / 7;
@@ -134,7 +137,7 @@
       grid-template-columns: 1fr;
       align-items: start;
     }
-    
+
     @include on-desktop {
       grid-column: 7 / 13;
       grid-row: 1;
@@ -145,12 +148,13 @@
 
     &-title {
       @extend %schedule-title;
+
       margin-bottom: 20px;
-      
+
       @include on-tablet {
         margin-bottom: 20px;
       }
-      
+
       @include on-desktop {
         margin-bottom: 20px;
       }
@@ -163,14 +167,13 @@
         gap: 26px;
         align-items: start;
       }
-      
+
       @include on-desktop {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 30px;
         align-items: start;
       }
-      
     }
 
     &-list {
@@ -178,15 +181,15 @@
       padding: 0;
       list-style: none;
       white-space: nowrap;
-      
+
       // Мобільна версія - список під заголовком
       padding-bottom: 16px;
-      
+
       @include on-tablet {
         padding-bottom: 0;
         grid-column: 1;
       }
-      
+
       @include on-desktop {
         padding-bottom: 0;
         grid-column: 1;
@@ -199,20 +202,20 @@
 
     &-note {
       @extend %menu-text;
+
       font-weight: 600;
-      
+
       @include on-tablet {
         grid-column: 2;
         align-self: start;
       }
-      
+
       @include on-desktop {
         grid-column: 2;
         align-self: start;
         width: 170px;
       }
-    
-      
+
       span {
         @extend %menu-text;
       }
@@ -237,7 +240,7 @@
     transition: opacity 0.3s ease;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       inset: 0;
       background: rgba(24, 24, 26, 0.3);
@@ -251,8 +254,7 @@
   }
 }
 
-#menu:target ~ .menu__overlay {
+.menu:target ~ .menu__overlay {
   opacity: 1;
   pointer-events: auto;
 }
- 

@@ -3,13 +3,12 @@
 
   scroll-behavior: smooth;
 
-
   &__body {
     margin: 0;
     padding: 0;
   }
 
-html:target {
-  scroll-behavior: auto;
-}
+  html:target {
+    scroll-behavior: auto;
+  }
 }

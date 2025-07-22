@@ -1,128 +1,129 @@
- %h1 {
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 100%;
-    color: #000000;
-  }
+%h-1 {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 100%;
+  color: #000;
+}
 
-  %h2 {
-    @extend %h1;
-    font-size: 36px ;
-    color: #0F0E08;
-  }
+%h-2 {
+  @extend %h-1;
 
-  %h3 {
-    @extend %h1;
+  font-size: 36px;
+  color: #0f0e08;
+}
 
-    font-weight: 400;
-    font-size: 28px;
-    color:#0F0E08;
-  }
+%h-3 {
+  @extend %h-1;
 
-  %h4 {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    color: #687480;
-  }
+  font-weight: 400;
+  font-size: 28px;
+  color: #0f0e08;
+}
 
-  %date-text {
-    text-transform: uppercase;
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 100%;
-    color:#1A5A4C;
-  }
+%h-4 {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  color: #687480;
+}
 
-  %description-text {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    color:#4E4E4E;
-  }
+%date-text {
+  text-transform: uppercase;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  color: #1a5a4c;
+}
 
-  %subscribe-text {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 150%;
-    text-align: center;
-    color: #fff;
-  }
+%description-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  color: #4e4e4e;
+}
 
-  %E-mail {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #687480;
-  }
+%subscribe-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+}
 
-  %footer-title {
-    @extend %subscribe-text;
-    text-align: left;
-    font-size: 14px;
-    line-height: 141%;
-    color: #0F0E08;
-  }
+%e-mail {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #687480;
+}
 
-  %footer-schedule {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 150%;
-    letter-spacing: 0%;
-    color:#0F0E08;
-  } 
+%footer-title {
+  @extend %subscribe-text;
 
-  %footer-contart {
-     @extend %footer-schedule;
+  text-align: left;
+  font-size: 14px;
+  line-height: 141%;
+  color: #0f0e08;
+}
 
-     font-weight: 400;
-  }
+%footer-schedule {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #0f0e08;
+}
 
-  %footer__nav-text {
-    font-family: "IBM Plex Sans", sans-serif;
-     font-weight: 400;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #0F0E08;
-  }
+%footer-contart {
+  @extend %footer-schedule;
 
-  %footer__designer {
-    @extend %footer__nav-text;
-    font-weight: 300;
-    font-size: 12px;
-    line-height: 141%;
-   }
+  font-weight: 400;
+}
 
+%footer-nav-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #0f0e08;
+}
 
-   %schedule-title {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 141%;
-    color: #fff;
-   }
+%footer-designer {
+  @extend %footer-nav-text;
 
-  %menu-text {
-    font-family: "IBM Plex Sans", sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: #fff;
-  }
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 141%;
+}
 
-  %header__border-text {
-     @extend %E-mail;
-     font-weight: 700;
-  }
+%schedule-title {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 141%;
+  color: #fff;
+}
 
- 
+%menu-text {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+}
+
+%header-border-text {
+  @extend %e-mail;
+
+  font-weight: 700;
+}
