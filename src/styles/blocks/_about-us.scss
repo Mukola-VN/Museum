@@ -51,7 +51,7 @@
   }
 
   &__label {
-    @extend %h4;
+    @extend %h-4;
 
     display: block;
     margin: 0;
@@ -73,7 +73,7 @@
   }
 
   &__name {
-    @extend %h3;
+    @extend %h-3;
 
     margin: 0;
     text-align: center;

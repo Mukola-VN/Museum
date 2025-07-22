@@ -16,12 +16,12 @@
   }
 
   &__title {
-    @extend %h2;
+    @extend %h-2;
 
     margin: 0;
 
     @include on-tablet {
-      @extend %h2;
+      @extend %h-2;
 
       font-size: 48px;
       text-align: start;
@@ -140,10 +140,10 @@
     }
 
     &-type {
-      @extend %h4;
+      @extend %h-4;
 
       @include on-tablet {
-        @extend %h4;
+        @extend %h-4;
 
         font-size: 14px;
       }
@@ -166,7 +166,7 @@
       margin: 0;
       vertical-align: text-bottom;
 
-      @extend %h3;
+      @extend %h-3;
 
       @include on-tablet {
         font-size: 36px;

@@ -42,7 +42,7 @@
   }
 
   &__logo {
-    @extend %h1;
+    @extend %h-1;
 
     position: absolute;
     text-decoration: none;
@@ -115,7 +115,7 @@
   }
 
   &__title {
-    @extend %h1;
+    @extend %h-1;
 
     margin: 0;
     color: $h1-color;
@@ -155,7 +155,7 @@
   }
 
   &__ticket-text {
-    @extend %h4;
+    @extend %h-4;
 
     flex: 1;
     text-align: center;
@@ -205,7 +205,7 @@
     }
 
     &-text {
-      @extend %header__border-text;
+      @extend %header-border-text;
 
       writing-mode: vertical-lr;
       transform: rotate(180deg);

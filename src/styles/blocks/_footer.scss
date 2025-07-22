@@ -58,7 +58,7 @@
   }
 
   &__logo {
-    @extend %h2;
+    @extend %h-2;
   }
 
   &__social {
@@ -245,7 +245,7 @@
       margin: 0;
 
       li {
-        @extend %footer__nav-text;
+        @extend %footer-nav-text;
 
         display: flex;
         gap: 20px;
@@ -306,7 +306,7 @@
   }
 
   &__copyright {
-    @extend %footer__designer;
+    @extend %footer-designer;
 
     margin-bottom: 10px;
     white-space: nowrap;
