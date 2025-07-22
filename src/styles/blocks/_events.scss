@@ -7,51 +7,102 @@
     @include content-padding-inline;
   }
 
+  @include on-desktop {
+    padding-block: 200px 104px  ;
+    @include content-padding-inline;
+  }
+
   &__title {
     @extend %h2;
     margin: 0;
 
  @include on-tablet {
-       @extend %h2;
-       font-size: 48px;
-    }
-
-  @include on-tablet {
-       text-align: start;
-    }
+    @extend %h2;
+    font-size: 48px;
+    text-align: start;
   }
+}
 
   &__container {
     padding-top: 40px;
    
-    @include on-tablet {
-       padding-top: 48px;
-    }
+  @include on-tablet {
+    padding-top: 48px;
   }
+
+  @include on-desktop {
+    padding-top: 56px;
+  }
+}
 
   &__item {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    cursor: pointer;
 
-    &-2 {
-      padding-top: 64px;
+  @include on-desktop {
+    display: grid;
+    max-width: 1280px;
+    grid-template-columns: repeat(12,1fr);
+    column-gap: 30px;
+
+  &--second {
+     @include on-desktop {
+      padding-top: 104px;
+
     }
-    
-    
-  &-image { 
+  }
+}
+
+
+  &-image {
     display: block;
     object-fit: cover;
     height: 210px;
     width: 100%;
     padding: 0;
+    
+  transition: transform 0.3s ease;
+  @include hover(transform, scale(1.05));
 
-    @include on-tablet {
-      height: 520px;
 
-    }
-   }
+  @include on-tablet {
+    height: 520px;
+  }
+  @include on-desktop {
+    grid-column: 1/8;
+    height: 520px;
+    object-fit: cover;
+    padding-bottom: 104px;
+  }
+  @include on-desktop {
+    padding-bottom: 0;
+  }
+}
+
+&-content-1{
+ padding-bottom: 64px;
+
+   @include on-desktop {
+    display: flex;
+   height: 202px;
+   flex-direction: column;
+   padding: 0;
+   grid-column: 9/13;
+ }
+}
    
+  &-content{ 
+     @include on-desktop {
+      height: 228px;
+      flex-direction: column;
+      padding: 0;
+      grid-column: 9/13;
+    }
+  }
+
+
   &-meta {
     display: flex;
     justify-content: flex-start;
@@ -63,17 +114,27 @@
   @include on-tablet {
     margin-top: 44px;
     margin-bottom: 32px;
+
+  @include on-desktop {
+    margin-top: 159px;
+    margin-bottom: 30px;
+  }
+    
   }
 
-    &-2 {
-       margin-bottom: 10px;
+  &-2 {
+    margin-bottom: 10px;
 
   @include on-tablet {
     margin-top: 40px;
     margin-bottom: 30px;
-  }
     }
+
+  @include on-desktop {
+    margin-top: 146px;
   }
+  }
+}
 
   &-type {
    @extend %h4;
@@ -107,13 +168,23 @@
     font-size: 36px;
     margin-bottom: 15px;
    }
+   @include on-desktop {
+    margin: 0;
+   }
   }
 
   &-cube {
   width: 10px;
   height: 10px;
   background-color: #F14A27;
-  vertical-align: text-bottom;
+  @include on-tablet {
+    width: 15px;
+    height: 15px;
+  }
+  @include on-desktop {
+    width: 15px;
+    height: 15px;
+  }
 }
 
   &-description {
@@ -121,13 +192,11 @@
     @extend  %description-text;
     margin-top: 15px;
     margin-bottom: 0; 
-    
     @include on-tablet {
        max-width: 460px;
-    }
+   }
   }
-
-  } 
+ } 
 }
   
  

@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="icon" href="/images/favicon/favicon (NA MU).8a41574a.png" type="image/x-icon" />
+
   <title>Museum</title>
   <link rel="stylesheet" href="./styles/main.scss" />
 
 </head>
 
 <body class="page__body">
-  <header class="header">
+  <header class="header" id="header">
     <div class="header__container">
 
       <div class="header__image">
-
-        <a href="#" class='header__logo'>NA<br />MU</a>
-
+        <a href="#page" class='header__logo'>NA<br />MU</a>
       </div>
 
       <div class="header__bottom">
@@ -24,12 +24,18 @@
           <span>ХУДОЖНІЙ<br />МУЗЕЙ</span>
         </h1>
 
-        <div class="header__ticket">
+        <a href="#events" class="header__ticket">
           <span class="header__ticket-text">КВИТКИ</span>
-          <button class="header__arrow-btn">
+          <button class="header__arrow-btn" aria-label="Перейти до подій">
             <img src="/images/icons/arrow_right.png" alt="Стрілка" />
           </button>
-        </div>
+        </a>
+
+      </div>
+
+      <div class="header__border">
+        <div class="header__border-line"></div>
+        <div class="header__border-text">події</div>
       </div>
 
       <div class="header__icon">
@@ -50,13 +56,13 @@
             <a class="menu__link" href="#gallery">Галерея</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#compare-bikes">Про Нас</a>
+            <a class="menu__link" href="#footer__contacts__text">Про Нас</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#about-us">Виставки та події</a>
+            <a class="menu__link" href="#events">Виставки та події</a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#details">Контакти</a>
+            <a class="menu__link" href="#footer__contacts__text">Контакти</a>
           </li>
         </ul>
       </nav>
@@ -97,7 +103,7 @@
         <article class="events__item">
           <img src="/images/events-section/first-picture.png" alt="Виставка Йду і повертаюсь"
             class="events__item-image" />
-          <div class="events__item-content">
+          <div class="events__item-content-1">
             <div class="events__item-meta">
               <span class="events__item-type">ВИСТАВКА</span>
               <span class="events__item-date">26.08–29.11.2019</span>
@@ -113,7 +119,7 @@
           </div>
         </article>
         <!--  2 виставка  -->
-        <article class="events__item events__item-2">
+        <article class="events__item events__item--second">
           <img src="/images/events-section/second-picture.png" alt="Виставка Йду і повертаюсь"
             class="events__item-image" />
           <div class="events__item-content">
@@ -148,8 +154,30 @@
     <!-- Gallery -->
     <section class="gallery" id="gallery">
       <h2 class="gallery__title">Галерея</h2>
-      <div class="gallery__container">
 
+      <div class="gallery__grid">
+        <!-- first-photo -->
+        <div class="gallery__grid--position-1 gallery__grid-image-wrapper">
+          <img src="../images/gallery-section-grid/1-foto.png" alt="gallery-photo" />
+        </div>
+
+        <!-- second-photo -->
+        <div class="gallery__grid--position-2 gallery__grid-image-wrapper">
+          <img src="../images/gallery-section-grid/2-foto.png" alt="gallery-photo" />
+        </div>
+
+        <!-- third-photo -->
+        <div class="gallery__grid--position-3 gallery__grid-image-wrapper">
+          <img src="../images/gallery-section-grid/3-foto.png" alt="gallery-photo" />
+        </div>
+
+        <!-- fourth-photo -->
+        <div class="gallery__grid--position-4 gallery__grid-image-wrapper">
+          <img src="../images/gallery-section-grid/44-foto.png" alt="gallery-photo" />
+        </div>
+      </div>
+
+      <div class="gallery__container">
         <!-- Swiper for mobile/tablet -->
         <div class="swiper gallery__swiper">
           <div class="swiper-wrapper">
@@ -170,92 +198,94 @@
         </div>
       </div>
     </section>
-    <!-- Subscribe  -->
-    <section class="subscribe">
-      <div class="subscribe__image-wrapper">
-        <img src="/images/subscribe-secrion/Rectangle 22.3.png" alt="subscribe image" class="subscribe__image">
-      </div>
 
-      <div class="subscribe__content">
-        <h1 class="subscribe__title">Підписка</h1>
-        <span class="subscribe__description">Бути в курсі всіх актуальних подій та останніх новин.</span>
-      </div>
-      <div class="subscribe__email-wrapper">
-        <input class="subscribe__email" type="email" name="email" placeholder="E-mail" required />
-        <button class="subscribe__button" type="submit">
-          <img src="/images/icons/arrow_right-black.png" alt="Стрілка" class="subscribe__button-icon" />
-        </button>
+    <!-- Subscribe  -->
+    <section class="subscribe" id="subscribe">
+      <div class="subscribe__container">
+        <div class="subscribe__content">
+          <h1 class="subscribe__title">Підписка</h1>
+          <span class="subscribe__description">Бути в курсі всіх актуальних подій та останніх новин.</span>
+        </div>
+        <form class="subscribe__form form" id="subscribeForm">
+          <div class="subscribe__email-wrapper">
+            <input class="subscribe__email form__input" type="email" name="email" id="email" placeholder="E-mail"
+              required />
+            <button class="subscribe__button form__btn" type="submit">
+              <img src="/images/icons/arrow_right-black.png" alt="Стрілка" class="subscribe__button-icon" />
+            </button>
+          </div>
+        </form>
+
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__top">
         <div class="footer__logo-social">
-          <div class="footer__logo">NA<br>MU</div>
+          <div class="footer__logo">
+            <a href="/" class="footer__logo-link">NA<br />MU</a>
+          </div>
           <div class="footer__social">
-            <a href="#" class="footer__icon" aria-label="Facebook">
-              <img src="/images/footer-media-icon/facebook-letter-logo.png" alt="Facebook">
-            </a>
-            <a href="#" class="footer__icon" aria-label="Instagram">
-              <img src="/images/footer-media-icon/instagram.png" alt="Instagram">
-            </a>
+            <a href="https://www.facebook.com" class="footer__icon footer__icon--facebook" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer"></a>
+            <a href="https://www.instagram.com" class="footer__icon footer__icon--instagram" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"></a>
           </div>
         </div>
         <div class="footer__info">
           <div class="footer__schedule">
             <div class="footer__title">Графік роботи</div>
             <ul>
-              <li><b>12:00 — 20:00</b><br><span>середа</span></li>
-              <li><b>12:00 — 20:00</b><br><span>четвер</span></li>
-              <li><b>12:00 — 20:00</b><br><span>п’ятниця</span></li>
-              <li><b>11:00 — 19:00</b><br><span>субота</span></li>
-              <li><b>11:00 — 19:00</b><br><span>неділя</span></li>
+              <li><b>12:00 — 20:00</b><span>середа</span></li>
+              <li><b>12:00 — 20:00</b><span>четвер</span></li>
+              <li><b>12:00 — 20:00</b><span>п'ятниця</span></li>
+              <li><b>11:00 — 19:00</b><span>субота</span></li>
+              <li><b>11:00 — 19:00</b><span>неділя</span></li>
             </ul>
             <div class="footer__note">
               Вихідні понеділок, вівторок<br>
-              Каса припиняє роботу за 1 годину до закриття музею
+              Каса припиняє роботу за 1 годину <br> до закриття музею
             </div>
           </div>
           <div class="footer__contacts">
             <div class="footer__title">Контакти:</div>
-            <address>
-              <p class="footer__contacts__text">
-                вул. М. Грушевського, 6;<br>
-                Київ, 01001<br>
-                тел. +38 (044) 278-13-57<br>
-                факс +38 (044) 278-74-54<br>
-                e-mail: <a href="mailto:info@namu.kiev.ua">info@namu.kiev.ua</a>
-              </p>
+            <address class="contact-us__value">
+              <a href="https://www.google.com/maps?q=вул.+М.+Грушевського,+6,+Київ,+01001" target="_blank"
+                class="footer__address-link">
+                вул. М. Грушевського, 6<br />
+                Київ, 01001<br />
+                тел. +38 (044) 278-13-57<br />
+                факс +38 (044) 278-74-54
+              </a>
             </address>
           </div>
         </div>
       </div>
       <div class="footer__up">
-        <a href="#" class="footer__up-btn" aria-label="Вгору">
+        <a href="#header" class="footer__up-btn" aria-label="Вгору">
           <span class="footer__up-arrow">&#8593;</span>
         </a>
       </div>
       <div class="footer__border"></div>
-
       <div class="footer__nav">
         <ul>
-          <li><a href="#">Галерея</a></li>
-          <li><a href="#">Виставки та події</a></li>
+          <li><a href="#gallery">Галерея</a></li>
+          <li><a href="#events">Виставки та події</a></li>
         </ul>
         <ul>
-          <li><a href="#">Про Нас</a></li>
-          <li><a href="#">Контакти</a></li>
+          <li><a href="#footer__contacts__text">Про Нас</a></li>
+          <li><a href="#footer__contacts__text">Контакти</a></li>
         </ul>
       </div>
       <div class="footer__bottom">
-        <div class="footer__designer">Designed by Zhirytska Marina</div>
         <div class="footer__copyright">Copyright © 2019. All Rights Reserved.</div>
+        <div class="footer__designer">Designed by Zhyriada Marina</div>
       </div>
     </div>
   </footer>
-
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="scripts/main.js"></script>

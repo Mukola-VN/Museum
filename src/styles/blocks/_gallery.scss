@@ -1,11 +1,15 @@
 .gallery {
   box-sizing: border-box;
-   padding-top: 40px;
-   @include content-padding-inline;
+  padding-top: 40px;
+  @include content-padding-inline;
 
-   @include on-tablet {
-    padding-top:0;
-   }
+  @include on-tablet {
+    padding-top: 0;
+  }
+
+  @include on-desktop {
+    padding-block: 200px;
+  }
 
   &__title {
     @extend %h2;
@@ -13,55 +17,126 @@
     text-align: center;
     margin: 0;
 
-  @include on-tablet {
-    text-align: start;
-    padding-bottom: 48px;
-   }
-    
+    @include on-tablet {
+      text-align: start;
+      padding-bottom: 48px;
+    }
   }
- 
-  &__swiper {
+
+  &__grid {
+    display: none;
+
+    @include on-desktop {
+      display: grid;
+      column-gap: 30px;
+      grid-template-columns: repeat(12, 1fr);
+      cursor: pointer;
+    }
+
+    &--position-1 {
+      @include on-desktop {
+        grid-column: 1/5;
+        width: 370px;
+        height: 600px;
+        margin-bottom: 30px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--position-2 {
+      @include on-desktop {
+        grid-column: 5/13;
+        width: 770px;
+        height: 600px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--position-3 {
+      @include on-desktop {
+        grid-column: 1/9;
+        width: 770px;
+        height: 360px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &--position-4 {
+      @include on-desktop {
+        grid-column: 9/12;
+        width: 370px;
+        height: 360px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &__container {
     display: block;
-    position: relative;
 
+    @include on-desktop {
+      display: none;
+    }
+  }
+
+  &__swiper {
+    position: relative;
+  }
+
+  &__swiper-slide {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
   }
- 
+
   &__swiper-image {
     object-fit: cover;
     width: 100%;
     height: 100%;
-  
-  @include on-tablet {
-    height: 543px;
+     cursor: pointer;
+
+    @include on-tablet {
+      height: 543px;
     }
   }
- 
-  .swiper-slide {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
- 
+
   .swiper-pagination {
     position: relative !important;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 22px;
-     --swiper-pagination-bottom: 0;
-     margin-top: 20px;
+    margin-top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    --swiper-pagination-bottom: 0;
 
-     left: 50%;
-     transform: translateX(-50%);
-
-     @include on-tablet {
-       margin-top: 32px;
-     }
+    @include on-tablet {
+      margin-top: 32px;
+    }
   }
- 
 }
 
 .swiper-wrapper {
@@ -74,7 +149,6 @@
   }
 }
 
-// Swiper bullets
 .swiper-pagination-bullet {
   background: #333 !important;
   opacity: 0.3 !important;
@@ -90,7 +164,3 @@
   opacity: 1 !important;
   background: #1A5A4C !important;
 }
-
-
-
-

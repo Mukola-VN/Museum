@@ -1,12 +1,43 @@
 .footer {
-  @include content-padding-inline;
-   padding-block: 18px 40px;
+  padding-block: 50px 40px;
+  padding-inline: 20px;
+
+  @include on-tablet {
+    padding-block: 51px 39px;
+    padding-inline: 39px;
+  }
+
+  @include on-desktop {
+    position: relative;
+    padding-block: 47px 35px;
+    padding-inline: 55px;
+  }
 
   &__container {
-
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+
+    @include on-tablet {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: 30px;
+      max-width: 768px;
+    }
+
+    @include on-desktop {
+      max-width: 1280px;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 30px;
+    }
+  }
+
+  &__top {
+    @include on-tablet {
+      grid-column: 1 / 7;
+      display: grid;
+      grid-template-columns: 1fr 2fr 3fr;
+      align-items: flex-start;
+    }
   }
 
   &__logo-social {
@@ -14,20 +45,63 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    @include on-tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0;
+    }
+
+    @include on-desktop {
+      grid-column: 1 / 2;
+    }
   }
 
   &__logo {
-   @extend %h2;
+    @extend %h2;
   }
 
   &__social {
     display: flex;
-    gap: 20px;
+    gap: 16px;
+  
+
+    @include on-tablet {
+      padding-top: 62px;
+      gap: 32px;
+    }
+
+    @include on-desktop {
+      gap: 22px;
+    }
   }
 
-  &__icon img {
+  &__icon {
+    display: inline-block;
     width: 24px;
     height: 24px;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+    transform: translateY(5px);
+    cursor: pointer;
+
+    &--facebook {
+      background-image: url(/images/footer-media-icon/facebook-letter-logo.png);
+
+      &:hover {
+        background-image: url(/images/footer-media-icon/facebook-hover.png);
+      }
+    }
+
+    &--instagram {
+      background-image: url(/images/footer-media-icon/instagram.png);
+
+      &:hover {
+        background-image: url(/images/footer-media-icon/instagram-hover.png);
+
+      }
+    }
   }
 
   &__info {
@@ -35,12 +109,20 @@
     justify-content: space-between;
     gap: 20px;
     font-size: 14px;
+
+    @include on-tablet {
+      display: contents;
+    }
+  }
+
+  &__schedule {
+    @include on-desktop {
+      grid-column: 3 / 5;
+    }
   }
 
   &__title {
     @extend %footer-title;
-    
-
     margin-bottom: 20px;
   }
 
@@ -49,31 +131,57 @@
     padding: 0;
     list-style: none;
 
-  li {
-    @extend %footer-schedule;
-
+    @include on-tablet {
+      white-space: nowrap;
     }
 
-   span {
-     @extend %footer-contart;
-   }
+    li {
+      @extend %footer-schedule;
+      display: flex;
+      flex-direction: column;
+
+      @include on-tablet {
+        flex-direction: row;
+        gap: 3px;
+      }
+    }
+
+    span {
+      @extend %footer-contart;
+    }
   }
 
   &__note {
     margin-top: 20px;
+    @extend %footer-contart;
 
-     @extend %footer-contart;
-   
+    @include on-tablet {
+      margin-bottom: 64px;
+      max-width: 220px;
+    }
   }
 
-  &__contacts__text {
-     @extend  %footer-contart;
+  &__contacts {
+    @include on-desktop {
+      grid-column: 6 / 8;
     }
+  }
+
+  &__address-link {
+    @extend %footer-contart;
+    cursor: pointer;
+  }
 
   &__up {
     display: flex;
     justify-content: end;
     margin: 20px;
+
+    @include on-tablet {
+      grid-column: 4 / 7;
+      justify-content: flex-end;
+      margin: 0;
+    }
   }
 
   &__up-btn {
@@ -88,62 +196,121 @@
     background: none;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: 0.2s;
+    transition: transform 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #d63f0d;
+    }
+
+    @include on-tablet {
+      display: none;
+    }
   }
 
   &__border {
-    border-top: 1px solid #1A5A4C; 
+    border-top: 1px solid #1A5A4C;
     width: 100%;
-  } 
 
-  &__nav {
-   display: flex;
-  justify-content: space-between;
-  margin-right: 75px;
-  padding-top: 40px;
-  font-size: 14px;
- 
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    
-    li {
-      @extend %footer__nav-text;
-
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
+    @include on-tablet {
+      grid-column: 2 / 6;
     }
 
+    @include on-desktop {
+      position: absolute;
+      top: 47px;
+      left: 690px;
+      right: 587px;
+      bottom: 150px;
+      width: 1px;
+      height: 260px;
+      background-color: #1A5A4C;
+    }
   }
-}
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 75px;
+    padding-top: 40px;
+    font-size: 14px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        @extend %footer__nav-text;
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+    }
+
+    @include on-tablet {
+      margin: 0;
+      display: grid;
+      grid-column: 2 / 6;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @include on-desktop {
+      grid-column: 8 / 12;
+      grid-row: 1;
+      padding: 0;
+      gap: 32px;
+    }
+  }
 
   a {
     text-decoration: none;
-    color: inherit; 
-  
+    color: inherit;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 
     &:hover {
+      transform: scale(1.2);
       color: #d63f0d;
     }
   }
 
-
   &__bottom {
+    display: grid;
     text-align: center;
     font-size: 12px;
     color: #888;
     margin-top: 80px;
+
+    @include on-tablet {
+      grid-column: 1 / 7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+    }
+
+    @include on-desktop {
+      gap: 820px;
+    }
+  }
+
+  &__copyright {
+    @extend %footer__designer;
+    margin-bottom: 10px;
+    white-space: nowrap;
   }
 
   &__designer {
-    @extend %footer__designer;
-     margin-bottom: 10px;
+    @include on-desktop {
+      grid-column: 11 / 12;
+      white-space: nowrap;
+      align-items: end;
+    }
   }
 }
-
- 

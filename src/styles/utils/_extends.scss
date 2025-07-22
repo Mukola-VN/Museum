@@ -120,4 +120,9 @@
     color: #fff;
   }
 
+  %header__border-text {
+     @extend %E-mail;
+     font-weight: 700;
+  }
+
  

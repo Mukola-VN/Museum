@@ -3,18 +3,24 @@
     display: flex;
  
     
-   &__container {
+  &__container {
     width: 100%;
     height: 100%;
 
-
-    @include on-tablet {
+  @include on-tablet {
      display: grid;
      grid-template-columns: repeat(6, 1fr);
      column-gap: 30px;
     }
+  
+  @include on-desktop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    padding-left: 55px;
+  }
  
-   }
+ }
 
   &__image {
     position: relative;
@@ -29,8 +35,13 @@
     width: 374px;
     height: 384px;
     }
-  }
 
+  @include on-desktop {
+    grid-column: 6 / 13;
+    width: 725px;
+    height: 655px;
+   }
+  }
 
   &__logo {
     position: absolute;
@@ -53,21 +64,35 @@
     height: 72px;
     font-size: 36px;
   }
+
+  @include on-desktop {
+    width: 170px;
+    height: 72px;
+    right: 555px;
+    bottom: 568px;
+    left: 12%;
+   }
  }
 
-  &__icon {
+ 
+ &__icon {
    position: absolute;
-      top: 27px;
-    left: 20px;
-    display: flex;
+   top: 27px;
+   left: 20px;
+   display: flex;
 
 
-  @include on-tablet {
-  position: absolute;
-    top: 39px;               
-    left: 34px;
-   }
+ @include on-tablet {
+   position: absolute;
+   top: 39px;               
+   left: 34px;
   }
+
+ @include on-desktop {
+   top: 39px;
+   left: 55px;
+  }
+ }
 
   &__bottom {
     padding-top: 20px;
@@ -81,9 +106,15 @@
     left: 34px;
     width: 340px;
     height: 130px;
+    }
 
-
-   }  
+  @include on-desktop {
+    grid-column: 1 / 6;
+    left: 55px;
+    top: 127px;
+    width: 470px;
+    height: 172px;
+   }
   }
 
   &__title {
@@ -95,10 +126,15 @@
 
   @include on-tablet {
     margin-bottom: 38px;
-      text-align: start;
-      font-size: 54px;
-   }
+    text-align: start;
+    font-size: 54px;
   }
+
+  @include on-desktop {
+    font-size: 72px;
+    margin-bottom: 89px;
+  }
+}
 
   &__ticket {
     display: flex;
@@ -108,11 +144,18 @@
     background: #fff;
     border: 1px solid $btn-border;
     box-sizing: border-box;
+    text-decoration: none;
     
   @include on-tablet {
     width: 270px;
     height: 70px;
    }
+
+  @include on-desktop {
+
+   margin-left: calc(50% - 30px)
+
+  }
   }
 
   &__ticket-text {
@@ -132,6 +175,11 @@
     height: 50px;
     cursor: pointer;
 
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+
     img {
       width: 24px;
       height: 24px;
@@ -141,6 +189,37 @@
     @include on-tablet {
     width: 70px;
     height: 70px;
+    }
+  }
+
+  &__border {
+    display: none;
+
+  @include on-desktop {
+    display: flex;
+    position: absolute;
+
+    top: 522px;
+    left: 55px;
+    width: 14px;
+    height: 133px;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center; 
+    justify-content: center;
+    flex-direction:column-reverse;
+  }
+
+  &-text {
+    @extend  %header__border-text;
+     writing-mode: vertical-lr;
+     transform: rotate(180deg);
+    }
+
+    &-line {
+      width: 1px;
+      height: 70px;
+      background-color: #1A5A4C;
     }
   }
 }

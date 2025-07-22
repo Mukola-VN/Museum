@@ -1,9 +1,8 @@
 .menu {
- 
   position: fixed;
   top: 0;
   left: 0;
-   width: 100%;
+  width: 100%;
   height: 399px;
   background-color: $menu-color;
   z-index: 2;
@@ -14,6 +13,10 @@
 
   @include on-tablet {
     height: 225px;
+  }
+
+  @include on-desktop {
+    height: 233px;
   }
 
   &:target {
@@ -27,14 +30,26 @@
     box-sizing: border-box;
     padding-inline: 20px;
     padding-block: 27px;
+    margin: 0 auto;
 
     @include on-tablet {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 30px;
       padding-top: 39px;
-      height: 100%;
       padding-inline: 34px;
+      
+      display: grid;
+      height: 100%;
+      grid-template-columns: repeat(6, 90px);
+      column-gap: 30px;
+    }
+
+    @include on-desktop {
+      max-width: 1280px;
+      padding-block: 40px;
+      padding-inline: 56px;
+      
+      display: grid;
+      grid-template-columns: repeat(12, 70px);
+      column-gap: 30px;
     }
   }
 
@@ -50,6 +65,11 @@
       grid-column: 1 / 4;
       grid-row: 1;
     }
+    
+    @include on-desktop {
+      grid-column: 1 / 5;
+      grid-row: 1;
+    }
   }
 
   &__list {
@@ -60,10 +80,12 @@
     list-style: none;
     gap: 28px;
     
-
     @include on-tablet {
       gap: 20px;
+    }
 
+    @include on-desktop {
+      gap: 31px;
     }
   }
 
@@ -74,76 +96,123 @@
     font-size: 16px;
     line-height: 100%;
     text-decoration: none;
+
+    &:hover {
+    color:  hwb(210 94% 30%);
+    }
   }
 
   &__border {
     border-bottom: 1px solid #fff;
-
-  @include on-tablet {
-    display: block;
-    grid-column: 3 / 4;
-    grid-row: 1 / 4;
-    border-right: 1px solid #fff;
-    width: 1px;
-    height: 145px;
-    justify-self: end;
+    
+    @include on-tablet {
+      display: block;
+      grid-column: 3 / 4;
+      grid-row: 1;
+      border-right: 1px solid #fff;
+      border-bottom: none;
+      width: 1px;
+      height: 145px;
+      justify-self: end;
+    }
+    
+    @include on-desktop {
+      grid-column: 5 / 6;
+      grid-row: 1;
+      height: 145px;
+    }
   }
-  }
-
 
   &__schedule {
     padding-top: 24px;
-
-  @include on-tablet {
-
+    
+    @include on-tablet {
       padding: 0;
       grid-column: 4 / 7;
       grid-row: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: start;
     }
     
-  &-title {
+    @include on-desktop {
+      grid-column: 7 / 13;
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    &-title {
       @extend %schedule-title;
-
+      margin-bottom: 20px;
+      
       @include on-tablet {
-        padding: 0;
         margin-bottom: 20px;
-        grid-column: 4 / 7;
-        grid-row: 1;
-
+      }
+      
+      @include on-desktop {
+        margin-bottom: 20px;
       }
     }
 
-  &-content {
-   @include on-tablet {
-    display: grid;
-    align-items: start;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px;
-    padding-top: 20px;
-
+    &-content {
+      @include on-tablet {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 26px;
+        align-items: start;
+      }
+      
+      @include on-desktop {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 30px;
+        align-items: start;
+      }
+      
     }
-  }
 
-  &-list {
+    &-list {
       margin: 0;
       padding: 0;
       list-style: none;
+      white-space: nowrap;
+      
+      // Мобільна версія - список під заголовком
       padding-bottom: 16px;
-
-  @include on-tablet {
-   
-  }
+      
+      @include on-tablet {
+        padding-bottom: 0;
+        grid-column: 1;
+      }
+      
+      @include on-desktop {
+        padding-bottom: 0;
+        grid-column: 1;
+      }
 
       li {
         @extend %menu-text;
-        font-weight: 600;
       }
     }
 
     &-note {
       @extend %menu-text;
       font-weight: 600;
-
+      
+      @include on-tablet {
+        grid-column: 2;
+        align-self: start;
+      }
+      
+      @include on-desktop {
+        grid-column: 2;
+        align-self: start;
+        width: 170px;
+      }
+    
+      
       span {
         @extend %menu-text;
       }
@@ -160,7 +229,7 @@
     position: fixed;
     top: 0;
     left: 0;
-      width: 100vw;
+    width: 100vw;
     height: 100vh;
     z-index: 1;
     pointer-events: none;
@@ -175,9 +244,9 @@
       z-index: 1;
     }
 
-  @include on-tablet {
-       width: 100vw;
-    height: 100vh;
+    @include on-tablet {
+      width: 100vw;
+      height: 100vh;
     }
   }
 }
@@ -186,3 +255,4 @@
   opacity: 1;
   pointer-events: auto;
 }
+ 

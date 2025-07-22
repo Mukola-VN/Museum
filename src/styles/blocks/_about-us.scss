@@ -11,6 +11,11 @@
     height: 390px;
     @include content-padding-inline;
   }
+
+  @include on-desktop  {
+    height: 550px;
+    padding: 0;
+  }
    
 
   }
@@ -28,8 +33,10 @@
     height: 204px;
     width: 570px;
     padding-inline: 55px;
-}  
-
+  }  
+  @include on-desktop {
+    padding-inline: 100px;
+  }
   }
   
   &__caption {
@@ -76,6 +83,10 @@
 
     @include on-tablet {
        text-align: start;
+    }
+
+    @include on-desktop {
+      padding-bottom: 50px;
     }
   }
 }
