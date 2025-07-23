@@ -1,25 +1,51 @@
+
 .subscribe {
   position: relative;
   margin-top: 100px;
   color: #fff;
   overflow: hidden;
-
-  background-image: url('/images/subscribe-secrion/Rectangle 22.3.png');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-
-  
+        
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+      
   @include on-tablet {
     margin-top: 92px;
-    
   }
+   
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/subscribe-secrion/Rectangle 22.3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    z-index: 1;
+    
+  
+    @include on-tablet {
+        background-size: cover;
+      background-position: center top;
+    }
 
+    @include on-desktop {
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  
   @include on-desktop {
     margin: 0;
-    
-
   }
+
 
   &__container {
     box-sizing: border-box;
