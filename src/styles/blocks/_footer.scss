@@ -1,16 +1,19 @@
 .footer {
   padding-block: 50px 40px;
-  padding-inline: 20px;
+
+ @include content-padding-inline;
 
   @include on-tablet {
     padding-block: 51px 39px;
-    padding-inline: 39px;
+
+ @include content-padding-inline;
   }
 
   @include on-desktop {
     position: relative;
     padding-block: 47px 35px;
-    padding-inline: 55px;
+
+ @include content-padding-inline;
   }
 
   &__container {
@@ -355,7 +358,7 @@
   color 0.3s ease-in-out;
 
 
-  &:hover { 
+  &:hover {
      color: #d63f0d;
   }
 }
