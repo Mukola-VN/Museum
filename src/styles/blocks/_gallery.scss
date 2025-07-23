@@ -9,18 +9,20 @@
   }
 
   @include on-desktop {
-      max-width: 1280px;
+    max-width: 1280px;
     padding-block: 200px;
   }
 
-  &__title {
+  &__title {  
     @extend %h-2;
+    font-size: 32px;
 
-    padding-bottom: 40px;
-    text-align: center;
     margin: 0;
 
     @include on-tablet {
+          @extend %h-2;
+          font-size: 48px;
+
       text-align: start;
       padding-bottom: 48px;
     }
@@ -28,103 +30,45 @@
 
   &__grid {
     display: none;
-    
+
     @include on-desktop {
       display: grid;
-      column-gap: 30px;
-      row-gap: 20px;
       grid-template-columns: repeat(12, 1fr);
-      cursor: pointer;
       gap: 20px;
-      
+      cursor: pointer;
     }
 
-    &--position-1 {
-      display: block;
+    &-item {
       @include on-desktop {
-        
-        grid-column: 1/5;
-        width: 370px;
-        height: 600px;
-      grid-row: 1/2;
-
-          
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-
-          &:hover {
-             transition: transform 0.3s ease;
-             transform: scale(1.05);
-             filter: brightness(0.8);
-          }
-        }
+        @include image-hover();
       }
-    }
 
-    &--position-2 {
-      @include on-desktop {
-        grid-column: 5/13;
-        width: 770px;
+      &--1 {
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
         height: 600px;
-          transition: transform 0.3s ease;
-
-          &:hover {
-             transition: transform 0.5s ease;
-             transform: scale(1.05);
-             filter: brightness(0.8);
-          }
-          
-          img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          
-        }
       }
-    }
 
-    &--position-3 {
-      @include on-desktop {
-        grid-column: 1/9;
-        grid-row: 2/2;
-        width: 770px;
+      &--2 {
+        grid-column: 5 / 13;
+        grid-row: 1 / 2;
+        height: 600px;
+      }
+
+      &--3 {
+        grid-column: 1 / 9;
+        grid-row: 2 / 3;
         height: 360px;
 
-        &:hover {
-           transition: transform 0.5s ease;
-           transform: scale(1.03);
-           filter: brightness(0.9);
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-
-        }
+        @include image-hover(1.03, 0.9, 0.5s);
       }
-    }
 
-    &--position-4 {
-      @include on-desktop {
-        grid-column: 9/13;
-            grid-row: 2/3;
-        width: 370px;
-        height: 360px; transition: transform 0.3s ease;
-          &:hover {
-             transition: transform 0.5s ease;
-             transform: scale(1.03);
-             filter: brightness(0.9);
-          }
+      &--4 {
+        grid-column: 9 / 13;
+        grid-row: 2 / 3;
+        height: 360px;
 
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          
-        }
+        @include image-hover(1.03, 0.9, 0.5s);
       }
     }
   }
@@ -168,7 +112,6 @@
     margin-top: 20px;
     left: 50%;
     transform: translateX(-50%);
-
     --swiper-pagination-bottom: 0;
 
     @include on-tablet {
@@ -177,6 +120,7 @@
   }
 }
 
+// Swiper wrapper
 .swiper-wrapper {
   height: 410px;
   width: 210px;
@@ -187,18 +131,11 @@
   }
 }
 
+// Swiper bullets
 .swiper-pagination-bullet {
-  background: #333 !important;
-  opacity: 0.3 !important;
-  width: 9px !important;
-  height: 9px !important;
-  border-radius: 50% !important;
-  margin: 0 !important;
-  cursor: pointer !important;
-  display: inline-block;
+  @include swiper-bullet(#333, 0.3);
 }
 
 .swiper-pagination-bullet-active {
-  opacity: 1 !important;
-  background: #1a5a4c !important;
+  @include swiper-bullet(#1a5a4c, 1);
 }
