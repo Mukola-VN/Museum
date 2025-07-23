@@ -23,7 +23,7 @@
 }
 
 // for img !!!
-@mixin image-hover($scale: 1.05, $brightness: 0.8, $transition: 0.3s) {
+@mixin image-hover($scale: 1.01, $brightness: 0.8, $transition: 0.3s) {
   transition: transform $transition ease;
 
   &:hover {
