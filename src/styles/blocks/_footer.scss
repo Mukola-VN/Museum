@@ -1,19 +1,19 @@
 .footer {
   padding-block: 50px 40px;
 
- @include content-padding-inline;
+  @include content-padding-inline;
 
   @include on-tablet {
     padding-block: 51px 39px;
 
- @include content-padding-inline;
+    @include content-padding-inline;
   }
 
   @include on-desktop {
     position: relative;
     padding-block: 47px 35px;
 
- @include content-padding-inline;
+    @include content-padding-inline;
   }
 
   &__container {
@@ -314,9 +314,9 @@
     margin-bottom: 10px;
     white-space: nowrap;
 
-      &:hover {
-     color: #d63f0d;
-  }
+    &:hover {
+      color: #d63f0d;
+    }
   }
 
   &__designer {
@@ -325,9 +325,9 @@
       white-space: nowrap;
       align-items: end;
 
-        &:hover {
-     color: #d63f0d;
-  }
+      &:hover {
+        color: #d63f0d;
+      }
     }
   }
 }
@@ -339,26 +339,27 @@
   margin-top: 10px;
   cursor: pointer;
 
-  transform:0.6s ease-in-out,
-  color 0.3s ease-in-out;
-  
+  transform:
+    0.6s ease-in-out,
+    color 0.3s ease-in-out;
+
   &:hover {
-     color: #d63f0d;
+    color: #d63f0d;
   }
 }
 
 .address-faks {
-    @extend %footer-contart;
+  @extend %footer-contart;
 
   display: inline-block;
   margin-top: 10px;
   cursor: pointer;
 
-    transform:0.3s ease-in-out,
-  color 0.3s ease-in-out;
-
+  transform:
+    0.3s ease-in-out,
+    color 0.3s ease-in-out;
 
   &:hover {
-     color: #d63f0d;
+    color: #d63f0d;
   }
 }

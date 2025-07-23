@@ -7,26 +7,25 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-           
+
   &::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
-         
+
   @include on-tablet {
     margin-top: 92px;
-     background-image: url(/images/subscribe-secrion/tablet-size.png);
+    background-image: url(/images/subscribe-secrion/tablet-size.png);
   }
-   
+
   @include on-desktop {
     margin: 0;
     background-image: url(/images/subscribe-secrion/desktop-size.png);
   }
- 
-    
+
   &__container {
     box-sizing: border-box;
     position: relative;
@@ -36,78 +35,78 @@
     z-index: 2;
     padding-block: 88px;
     padding-inline: 20px;
-     
+
     @include on-tablet {
       padding-block: 82px;
       padding-inline: 154px;
     }
-     
-    @include on-desktop {             
+
+    @include on-desktop {
       padding-block: 163px;
       padding-inline: 355px;
     }
   }
-   
+
   &__title {
     @extend %h-2;
-     
+
     margin: 0;
     padding-bottom: 20px;
     text-align: center;
     color: #fff;
-     
+
     @include on-tablet {
       padding-bottom: 16px;
     }
-     
+
     @include on-desktop {
       font-size: 48px;
     }
   }
-   
+
   &__description {
     @extend %subscribe-text;
-     
+
     align-items: center;
     display: flex;
-     
+
     @include on-tablet {
       padding: 0;
     }
   }
-   
+
   &__form {
     margin: 0;
     width: 100%;
-     
+
     padding-top: 50px;
     z-index: 2;
-     
+
     @include on-tablet {
       padding-top: 64px;
     }
-     
+
     @include on-desktop {
       padding-top: 72px;
     }
   }
-   
+
   &__email-wrapper {
     display: flex;
     height: 50px;
     overflow: hidden;
-     
+
     @include on-tablet {
       height: 70px;
       gap: 16px;
     }
-     
+
     @include on-desktop {
       gap: 30px;
       height: 70px;
     }
   }
-   
+
   &__email {
     flex: 1;
     padding: 18px 24px;
@@ -115,16 +114,16 @@
     border: none;
     color: #333;
     outline: none;
-     
+
     @include on-tablet {
       padding: 24px 28px;
     }
-     
+
     &::placeholder {
       @extend %e-mail;
     }
   }
-   
+
   &__button {
     display: flex;
     align-items: center;
@@ -136,16 +135,16 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-     
+
     @include on-tablet {
       width: 70px;
       height: 70px;
     }
-     
+
     &:hover {
       filter: brightness(90%);
     }
-    
+
     &-icon {
       width: 24px;
       height: 24px;

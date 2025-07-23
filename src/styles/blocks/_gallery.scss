@@ -13,16 +13,16 @@
     padding-block: 200px;
   }
 
-  &__title {  
+  &__title {
     @extend %h-2;
-    font-size: 32px;
 
+    font-size: 32px;
     margin: 0;
 
     @include on-tablet {
-          @extend %h-2;
-          font-size: 48px;
+      @extend %h-2;
 
+      font-size: 48px;
       text-align: start;
       padding-bottom: 48px;
     }
@@ -40,7 +40,7 @@
 
     &-item {
       @include on-desktop {
-        @include image-hover();
+        @include image-hover;
       }
 
       &--1 {
@@ -112,6 +112,7 @@
     margin-top: 20px;
     left: 50%;
     transform: translateX(-50%);
+
     --swiper-pagination-bottom: 0;
 
     @include on-tablet {
