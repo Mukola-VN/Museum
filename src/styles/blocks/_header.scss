@@ -17,6 +17,7 @@
       grid-template-columns: repeat(12, 1fr);
       column-gap: 30px;
       padding-left: 55px;
+
     }
   }
 
@@ -30,13 +31,11 @@
 
     @include on-tablet {
       grid-column: 4 / 7;
-      width: 374px;
       height: 384px;
     }
 
     @include on-desktop {
       grid-column: 6 / 13;
-      width: 725px;
       height: 655px;
     }
   }

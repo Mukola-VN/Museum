@@ -2,26 +2,23 @@
   position: relative;
   margin-top: 100px;
   color: #fff;
+  overflow: hidden;
 
   background-image: url('/images/subscribe-secrion/Rectangle 22.3.png');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); // затемнення
-    z-index: 1;
-  }
-
+  
   @include on-tablet {
     margin-top: 92px;
+    
   }
 
   @include on-desktop {
     margin: 0;
+    
+
   }
 
   &__container {
@@ -31,7 +28,6 @@
     align-items: center;
     flex-direction: column;
     z-index: 2;
-
     padding-block: 88px;
     padding-inline: 20px;
 
@@ -41,7 +37,7 @@
     }
 
     @include on-desktop {
-      height: 550px;
+      
       padding-block: 163px;
       padding-inline: 355px;
     }
@@ -78,7 +74,7 @@
   &__form {
     margin: 0;
     width: 100%;
-    max-width: 460px;
+
     padding-top: 50px;
     z-index: 2;
 
@@ -87,7 +83,7 @@
     }
 
     @include on-desktop {
-      padding-top: 73px;
+      padding-top: 72px;
     }
   }
 
@@ -103,6 +99,7 @@
 
     @include on-desktop {
       gap: 30px;
+      height: 70px;
     }
   }
 
