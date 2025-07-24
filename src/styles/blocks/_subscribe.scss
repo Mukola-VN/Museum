@@ -3,6 +3,8 @@
   margin-top: 100px;
   color: #fff;
   overflow: hidden;
+     width: 100%;
+
   background-image: url(/images/subscribe-secrion/mobile-size.png);
   background-size: cover;
   background-position: center center;
@@ -19,11 +21,13 @@
   @include on-tablet {
     margin-top: 92px;
     background-image: url(/images/subscribe-secrion/tablet-size.png);
+       width: 100%;
   }
 
   @include on-desktop {
     margin: 0;
     background-image: url(/images/subscribe-secrion/desktop-size.png);
+       width: 100%;
   }
 
   &__container {
@@ -33,6 +37,7 @@
     align-items: center;
     flex-direction: column;
     z-index: 2;
+    width: 1280px;
     padding-block: 88px;
     padding-inline: 20px;
 
