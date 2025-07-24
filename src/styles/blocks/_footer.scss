@@ -304,9 +304,13 @@
     }
 
     @include on-desktop {
-      gap: 820px;
-    }
+    display: grid;
+    grid-column: 1 / 13;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
   }
+}
+  
 
   &__copyright {
     @extend %footer-designer;
@@ -317,13 +321,17 @@
     &:hover {
       color: #d63f0d;
     }
+      @include on-desktop {
+    grid-column: 1 / 11;
+    align-self: center;
+  }
   }
 
   &__designer {
     @include on-desktop {
-      grid-column: 11 / 12;
+      grid-column: 12/ 13;
       white-space: nowrap;
-      align-items: end;
+      text-align: right; 
 
       &:hover {
         color: #d63f0d;
