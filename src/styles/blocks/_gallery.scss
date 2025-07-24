@@ -75,9 +75,14 @@
 
   &__container {
     display: block;
+    padding-top: 40px;
 
+    @include on-tablet {
+      padding-top: 48px;
+    }
     @include on-desktop {
       display: none;
+      padding-top: 56px;
     }
   }
 
